@@ -8,11 +8,12 @@ $(document).ready(function() {
         secretNumber = secret;
         guessesRemaining = 7;
         $("#guessesRemaining").html(guessesRemaining);
+        $("#controls").show();
     });
 
     function displayLostMessage() {
         $("#result").html("you don't have any guesses remaining! The secret number was " + secretNumber + ". Set a new secret number to start a new game.");
-        $("#result").append('<div><img src="http://i.imgur.com/7981ABx.gif"></div>');
+        $("#result").append('<div><img class="ending" src="http://i.imgur.com/7981ABx.gif"></div>');
     }
 
     $("#guessButton").click(function() {
@@ -29,8 +30,8 @@ $(document).ready(function() {
         var guess = parseInt(guessString, 10);
 
         if (guess === secretNumber) {
-          $("#result").html("WOOOOOOOHHHH!!!!!! The secret number is" + secretNumber);
-          $("#result").append('<div><img src="https://media0.giphy.com/media/l41YfcbSoHyk5quLC/giphy.gif"></div>');
+          $("#result").html("WOOOOOOOHHHH!!!!!! The secret number is " + secretNumber);
+          $("#result").append('<div><img class="ending" src="https://media0.giphy.com/media/l41YfcbSoHyk5quLC/giphy.gif"></div>');
         } else if (guess > secretNumber - 3 && guess < secretNumber + 3) {
           $("#result").html("so close!!!");
         } else if (guess < secretNumber) {

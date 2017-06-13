@@ -2,7 +2,34 @@ div {
   margin-bottom: 5px;
 }
 
-img {
+.ending {
   width: 256px;
   height: 256px;
+}
+
+.jars {
+  display: flex;
+  align-items: center;
+}
+
+.jellybeans {
+  border-radius: 15%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#jellybeans_small {
+  height: 64px;
+}
+
+#jellybeans_medium {
+  height: 128px;
+}
+
+#jellybeans_large {
+  height: 256px;
+}
+
+#controls {
+  display: none;
 }

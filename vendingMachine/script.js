@@ -16,7 +16,7 @@ $(document).ready(function() {
             $("#message").html("I bought chips for $1.50");
             $("#coke_purchases").html("I have bought " + chips + " chips");
         } else {
-            $("#message").html("Error!");
+            $("#message").html("You can't buy that.");
         }
         $("#money").html("I have $" + money);
     });

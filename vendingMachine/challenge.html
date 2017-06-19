@@ -8,16 +8,32 @@
     </head>
     <body>
         <h1>Vending Machine</h1>
-        <h2 id="money">I have $1</h2>
-        <button id="add_1_dollar">+ $1</button>
-        <button id="subtract_1_dollar">- $1</button>
-        <button id="add_25_cents">+ $0.25</button>
-        <button id="subtract_25_cents">- $0.25</button>
-        <h2 id="purchases">I bought 0 cokes and 0 chips.</h2>
-        <div>coke: $1.50</div>
-        <div>chips: $1.25</div>
-        <div>What do you want to buy?</div>
-        <input><button id="buy">Buy</button>
-        <div id="message"></div>
+        <div class="layout">
+          <div class="container">
+            <h2 id="money">I have $1</h2>
+            <button id="add_1_dollar">+ $1</button>
+            <button id="subtract_1_dollar">- $1</button>
+            <button id="add_25_cents">+ $0.25</button>
+            <button id="subtract_25_cents">- $0.25</button>
+            <div>
+              <input id="new_money">
+              <button id="set_money">Set Money</button>
+            </div>
+            <p id="purchases">I bought 0 cokes and 0 chips.</p>
+            <div>
+              <button id="refund">Refund</button>
+            </div>
+          </div>
+          <div class="container">
+            <h3>Prices:</h3>
+            <p>coke: $1.50</p>
+            <p>chips: $1.25</p>
+          </div>
+          <div class="container">
+            <div>What do you want to buy?</div>
+            <input id="vending_machine"><button id="buy">Buy</button>
+            <div id="message"></div>
+          <div>
+        </div>
     </body>
 </html>

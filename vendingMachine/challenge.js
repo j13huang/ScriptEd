@@ -25,11 +25,29 @@ $(document).ready(function() {
         }
     });
 
+    $("#set_money").click(function() {
+        var newMoneyString = $("#new_money").val();
+        var newMoney = parseInt(newMoneyString);
+        if (isFinite(newMoney)) {
+            money = newMoney;
+            $("#money").html("I have $" + money);
+        }
+    });
+
+    $("#refund").click(function() {
+        var refundedMoney = cokes * 1.5 + chips * 1.25;
+        cokes = 0;
+        chips = 0;
+        money = money + refundedMoney;
+        $("#money").html("I have $" + money);
+        $("#purchases").html("I bought " + cokes + " cokes and " + chips + " chips.");
+    });
+
     var cokes = 0;
     var chips = 0;
 
     $("#buy").click(function() {
-        var item = $("input").val();
+        var item = $("#vending_machine").val();
         if (item === "coke") {
             if (money < 1.5) {
                 $("#message").html("I don't have enough money for coke");

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var money = 1.00;
+    var money = 10.00;
 
     $("#add_1_dollar").click(function() {
         money = money + 1;
@@ -64,6 +64,12 @@ $(document).ready(function() {
                 chips = chips + 1;
                 $("#message").html("I bought chips for $1.25");
             }
+        } else if (item === "help" && money === 0) {
+            $("#message").html("Help is on the way! Here's some more money");
+            money = 100;
+            $("#money").html("I have $" + money);
+        } else if (item === "abracadabra" && money > 10) {
+            $("#message").html("MUAHAHAHA. You found the secret item!!!");
         } else {
             $("#message").html("This vending machine doesn't have that item");
         }

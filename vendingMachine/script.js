@@ -13,7 +13,7 @@ $(document).ready(function() {
         } else if (item === "chips" && money > 1.25) {
             money = money - 1.25;
             chips = chips + 1;
-            $("#message").html("I bought chips for $1.50");
+            $("#message").html("I bought chips for $1.25");
             $("#coke_purchases").html("I have bought " + chips + " chips");
         } else {
             $("#message").html("You can't buy that.");

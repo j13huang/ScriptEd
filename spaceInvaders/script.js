@@ -10,10 +10,10 @@ function setImageDirection(horizontalDirection) {
 
 
 $(document).ready(function() {
-	var upPressed = false;
-	var downPressed = false;
-	var leftPressed = false;
-	var rightPressed = false;
+  var upPressed = false;
+  var downPressed = false;
+  var leftPressed = false;
+  var rightPressed = false;
   var pixelsPerTick = 5;
   var maxNumberEnemies = 5;
   var enemyIDs = [];
